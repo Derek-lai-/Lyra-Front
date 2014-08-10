@@ -8,13 +8,19 @@ Lyra
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
         <title>Lyra</title>
     </head>
     <body>
         <div class="login screen">
-            
+            <h1 class="loginTitle"> Lyra </h1>
+            <ol class="loginMenu">
+                <li><input class="menubutton" type="button" value="Login" onclick="msgLogin()" /></li>
+                <li><input class="menubutton" type="button" value="Register" onclick="msgReg()" /></li>
+                <li><input class="menubutton" type="button" value="Continue as Guest" onclick="msgGuest()" /></li>
+            </ol>
         </div>
+
         <div class="wrapper">
             <div class="main">
                 <div class="header">
@@ -22,9 +28,9 @@ Lyra
                 </div>
                 <div class="content">
                     <form>
-                        <input type="button" value="Login" onclick="msgLogin()" />
-                        <input type="button" value="Register" onclick="msgReg()" />
-                        <input type="button" value="Continue as Guest" onclick="msgGuest()" />
+                        <input type="button" value="SongPlayPause" onclick="msgplaypause" />
+                        <input type="button" value="Suggest" onclick="msgSuggest" />
+                        <input type="button" value="ShuffleNext" onclick="msgShuffle" />
                     </form>
                 </div>
             </div>
@@ -38,7 +44,6 @@ Lyra
                 <div class="tile" data-page="favorites"><p>Favorites</p></div>
                 <div class="tile" data-page="Library"><p>My Library</p></div>
                 <div class="tile" data-page="playlist"><p>Playlists</p></div>
-                <div class="tile" data-page="moood"><p>Moods</p></div>
                 <div class="tile" data-page="settings"><p>Settings</p></div>
                 <div class="tile" data-page="feedback"><p>Feedback</p></div>
 
