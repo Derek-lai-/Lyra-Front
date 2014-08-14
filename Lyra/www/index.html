@@ -1,53 +1,66 @@
-<!--
-Derek Ho-Cheung Lai
-Lyra
--->
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <script src="js/hammer.js" charset="utf-8"></script>
-        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
-        <title>Lyra</title>
+        <!-- START Javascript -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/slide-menu.js"></script>
+        <!-- START CSS -->
+        <link href='css/style.css' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div class="wrapper">
+        <!-- Header START -->
+        <div class="mobile-header">
+            <ul class="clearfloat">
+                <li class="m-menu">
+                    <a><span class="menu-open">Lyra</span><span class="menu-close">Lyra</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Header END -->
 
-            <div class="slider menu">
-                <div class="title profile" data-page="profile"><p>Lyra</p></div>
-                <div class="tile" data-page="recent"><p>Sign In</p></div>
-                <div class="tile" data-page="recent"><p>Recent</p></div>
-                <div class="tile" data-page="favorites"><p>Favorites</p></div>
-                <div class="tile" data-page="Library"><p>My Library</p></div>
-                <div class="tile" data-page="playlist"><p>Playlists</p></div>
-                <div class="tile" data-page="settings"><p>Settings</p></div>
-                <div class="tile" data-page="feedback"><p>Feedback</p></div>
-                <div class="tile" data-page="feedback"><p>About</p></div>
-            </div>
+        <div id="container-outer">
 
-            <div class="main">
-
-                <div class="header">
-                    <a href="#" class="sidebar_toggle">
-                        <div class="slide_button">
-                            <img src="img/logo.png">
-                        </div>
-                    </a>
-
-                    <h1>Lyra</h1>
+            <!-- SideMenu START -->
+            <div class="mobile-menu">
+                <div class="image-container">
+                    <img src="img/logo.png">
                 </div>
-                
-                <div class="content">
-                    <div class="screen">
-                         <div class="controls" data-page="songs"><p>CurSong</p></div>
-                        <div class="controls" data-page="songs"><p>SuggestStong</p></div>
-                        <div class="controls" data-page="songs"><p>NextSong</p></div>
-                    </div>
+                <div class="menu-items">
+                    <div class="tile" data-page="recent"><p>Sign In</p></div>
+                    <div class="tile" data-page="recent"><p>Recent</p></div>
+                    <div class="tile" data-page="favorites"><p>Favorites</p></div>
+                    <div class="tile" data-page="Library"><p>My Library</p></div>
+                    <div class="tile" data-page="playlist"><p>Playlists</p></div>
+                    <div class="tile" data-page="settings"><p>Settings</p></div>
+                    <div class="tile" data-page="feedback"><p>Feedback</p></div>
+                    <div class="tile" data-page="feedback"><p>About</p></div>
                 </div>
             </div>
+            <!-- SideMenu End -->
+            
+            <div id="container">
+                <div id="container-inner">
+                    <div class="player-buttons" id="cursong">
+                        <p>CurrentSong</p>
+                    <div>
+                    <!--commented out for Confenditiality
+                    <div class="player-buttons" id="sugsong">
+                        <p>SuggestSong</p>
+                    <div>
+                    <div class="player-buttons" id="shufflesong">
+                        <p>ShuffleSong</p>
+                    <div>
+                    -->
+                    <div class="player-buttons" id="prevsong">
+                        <p>PrevSong</p>
+                    <div> 
+                </div>
+            </div>
 
+            <div class="mobile-menu-bg"></div>
         </div>
     </body>
 </html>
