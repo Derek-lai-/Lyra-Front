@@ -5,8 +5,10 @@
 	margin: 0px;
 	padding: 0px;
 	font-family: inherit;
+	overflow: hidden;
 }
 body {
+	width: 100%;
 	font-size: 12px;
 	font-family: 'Open Sans', sans-serif;
 	line-height: 200%;
@@ -42,17 +44,19 @@ h2 {
 	margin: 0px 0px 20px 0px;
 }
 /* Layout */
+
 #container-outer,
 #container {
-	width: 100%;
+	max-width: 100%;
 	overflow: hidden;
 	display: block;
 }
 #container-inner {
-	max-width: 100%;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 	display: block;
-	padding: 20px;
+	padding: 10px;
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	background: #ffffff;
@@ -126,14 +130,15 @@ h2 {
 .mobile-menu {
 	/* background: #222222; */
 	margin: 0px;
-	padding: 20px;
-	width: 30%;
+	background: #222222;
+	padding: 10px;
+	max-width: 30%;
 	text-transform: none;
 	font-size: 12px;
-	position: absolute;
+	position: fixed;
 	top: 9%;
 	bottom: 0px;
-	left: -30%; /* Hides Brief Menu Popup As JavaScript Loads */
+	left: -40%;/* Hides Brief Menu Popup As JavaScript Loads */
 	z-index: 9998;
 	display: block;
 	height: 100%;
@@ -147,16 +152,18 @@ h2 {
 .mobile-menu-bg {
 	background: #222222;
 	margin: 0px;
+	padding: 10px;
 	position: fixed;
-	width: 30%;
-	top: 0px;
+	max-width: 30%;
+	top: 9%;
 	bottom: 0px;
-	left: -30%; /* Hides Brief Menu Popup As JavaScript Loads */
+	left: -40%/* Hides Brief Menu Popup As JavaScript Loads */
 	z-index: 9997;
 	display: block;
 	height: 100%;
 	-webkit-box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 1);
 	box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 1);
+	overflow: hidden;
 }
 .mobile-menu.active,
 .mobile-menu-bg.active {
@@ -164,13 +171,18 @@ h2 {
 }
 
 .image-container{
-	width: 30%;
-	height:15%;
+	max-width: 100%;
+	max-height: 20%;
+	min-height: 20%;
+	background: blue;
 }
 
 .image-container img{
-	height: 70px;
-	width: 70px;
+	position: relative;
+	padding: 3px;
+	margin: 3px;
+	height: 100%;
+	width: 100%;
 }
 /* Floats */
 .clearfloat:after {
@@ -178,3 +190,77 @@ h2 {
 	display: table;
 	clear: both;
 }
+
+#cursong, #prevsong, #shufflesong, #sugsong {
+    width: 35%;
+    height: 22%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5), inset 2px 2px 4px rgba(0,0,0,.5);
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);  
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);
+}
+
+#cursong {
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	text-align: center;
+	left: 33%;
+	top: 45%;
+    border: 8px solid blue;
+    z-index: 1;
+}
+
+#prevsong {
+	position: absolute;
+	left: -20%;
+	top: 45%;
+    border: 8px solid red;
+    z-index: 2;
+}
+
+#shufflesong {
+	position: absolute;
+	left: 82%;
+	top: 45%;
+    border: 8px solid green;
+    z-index: 3;
+}
+
+#sugsong {
+	position: absolute;
+	left: 82%;
+	top: 72%;
+    border: 8px solid yellow;
+    z-index: 2;
+}
+
+#container-cursong {
+	position: fixed;
+	width: 50%;
+	height: 20%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	left: 27%;
+	top: 17%;
+	overflow: hidden;
+}
+
+.next-song{
+	position:fixed;
+	width: 50%;
+	height: 15%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	left: 27%;
+	top: 85%;
+	overflow: hidden;
+}
+
+
+

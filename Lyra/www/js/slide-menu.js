@@ -7,18 +7,18 @@ $(document).ready(function() {
 		$(".mobile-menu-bg").addClass("active");
 	});
 	
-	$(".mobile-menu").css('left','-30%');
-	$(".mobile-menu-bg").css('left','-30%');
+	$(".mobile-menu").css('left','-36%');
+	$(".mobile-menu-bg").css('left','-36%');
 	$(".m-menu").toggle(function() {
-		$('.mobile-menu').animate({ left: '0' }, { duration: 200, queue: false });
-		$('.mobile-menu-bg').animate({ left: '0' }, { duration: 200, queue: false });
-		$('#container').animate({ 'margin-left': '30%' }, { duration: 200, queue: false });
-		$('#container').animate({ 'margin-right': '-30%' }, { duration: 200, queue: false });
+		$('.mobile-menu').animate({ left: '0' }, { duration: 700, queue: false });
+		$('.mobile-menu-bg').animate({ left: '0' }, { duration: 700, queue: false });
+		$('#container').animate({ 'margin-left': '36%' }, { duration: 700, queue: false });
+		$('#container').animate({ 'margin-right': '-36%' }, { duration: 700, queue: false });
 	}, function() {       
-		$('.mobile-menu-bg').animate({ left: '-30%' }, { duration: 200, queue: false });
-		$('.mobile-menu').animate({ left: '-30%' }, { duration: 200, queue: false });
-		$('#container').animate({ 'margin-left': '0' }, { duration: 200, queue: false });
-		$('#container').animate({ 'margin-right': '0' }, { duration: 200, queue: false });
+		$('.mobile-menu-bg').animate({ left: '-36%' }, { duration: 700, queue: false });
+		$('.mobile-menu').animate({ left: '-36%' }, { duration: 700, queue: false });
+		$('#container').animate({ 'margin-left': '0' }, { duration: 700, queue: false });
+		$('#container').animate({ 'margin-right': '0' }, { duration: 700, queue: false });
 	}
 	);
 })
