@@ -21,4 +21,23 @@ $(document).ready(function() {
 		$('#container').animate({ 'margin-right': '0' }, { duration: 700, queue: false });
 	}
 	);
+
+	var shiftleft = false;
+	var shiftright = false;
+	var voteup = false;
+	var votedown = false;
+	var suggest = true;
+
+	Hammer('.cursong').on("swipeleft", function(){
+		$('.cursong').animate({ left: '-20%' }, { duration: 700, queue: false });
+	});
+	Hammer(csong).on("swiperight", function(){
+		ev.innerHTML = "right";
+		$('.cursong').animate({ left: '82%' }, { duration: 700, queue: false });
+	});
+
+	Hammer(csong).on("dragleft", function(){
+		console.log("dragging");
+	});
+
 })

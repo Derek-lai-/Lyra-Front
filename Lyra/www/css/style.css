@@ -191,7 +191,7 @@ h2 {
 	clear: both;
 }
 
-#cursong, #prevsong, #shufflesong, #sugsong {
+.cursong, .prevsong, .shufflesong, .sugsong {
     width: 35%;
     height: 22%;
     -moz-border-radius: 100%;
@@ -203,39 +203,48 @@ h2 {
     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);
 }
 
-#cursong {
+.cursong {
 	margin-left: auto;
 	margin-right: auto;
 	position: absolute;
 	text-align: center;
-	left: 33%;
+	left: 32%;
 	top: 45%;
     border: 8px solid blue;
     z-index: 1;
+    cursor: pointer;
+    background-image: url(../img/colors.jpg);
+    background-position: center;
 }
 
-#prevsong {
+.prevsong {
 	position: absolute;
 	left: -20%;
 	top: 45%;
     border: 8px solid red;
     z-index: 2;
+    background-image: url(../img/monstercat.jpg);
+    background-position: center;
 }
 
-#shufflesong {
+.shufflesong {
 	position: absolute;
 	left: 82%;
 	top: 45%;
     border: 8px solid green;
     z-index: 3;
+    background-image: url(../img/zedd.jpg);
+    background-position: center;
 }
 
-#sugsong {
+.sugsong {
 	position: absolute;
 	left: 82%;
 	top: 72%;
-    border: 8px solid yellow;
+    border: 8px solid purple;
     z-index: 2;
+    background-image: url(../img/raider.jpg);
+    background-position: center;
 }
 
 #container-cursong {
