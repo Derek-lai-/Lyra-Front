@@ -230,7 +230,7 @@ h2 {
 .shufflesong {
 	position: absolute;
 	left: 82%;
-	top: 45%;
+	top: 72%;
     border: 8px solid green;
     z-index: 3;
     background-image: url(../img/zedd.jpg);
@@ -240,7 +240,7 @@ h2 {
 .sugsong {
 	position: absolute;
 	left: 82%;
-	top: 72%;
+	top: 45%;
     border: 8px solid purple;
     z-index: 2;
     background-image: url(../img/raider.jpg);
