@@ -1,6 +1,6 @@
 /* Reset */
 * {
-	background: transparent;
+	background: #231e43;
 	border: 0px;
 	margin: 0px;
 	padding: 0px;
@@ -59,7 +59,7 @@ h2 {
 	padding: 10px;
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-	background: #ffffff;
+	background: #231e43;
 }
 /* Mobile Menu */
 .mobile-header {
@@ -68,7 +68,7 @@ h2 {
 	display: block;
 	position: relative;
 	z-index: 30;
-	background: #ffffff;
+	background: #231e43;
 	z-index: 9999;
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
@@ -112,7 +112,7 @@ h2 {
 .mobile-header ul li.active,
 .mobile-header ul li.active a {
 	color: #ffffff;
-	background: #77c043;
+	/*background: #317728;*/
 }
 .mobile-header ul li a:hover,
 .mobile-header ul li.active a {
@@ -144,6 +144,7 @@ h2 {
 	height: 100%;
 	overflow: hidden;
 	color: #ffffff;
+	-webkit-transform: translate3d(0,0,0);
 }
 .mobile-menu.active {
 	height: auto;
@@ -164,6 +165,7 @@ h2 {
 	-webkit-box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 1);
 	box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 1);
 	overflow: hidden;
+	-webkit-transform: translate3d(0,0,0);
 }
 .mobile-menu.active,
 .mobile-menu-bg.active {
@@ -174,7 +176,6 @@ h2 {
 	max-width: 100%;
 	max-height: 20%;
 	min-height: 20%;
-	background: blue;
 }
 
 .image-container img{
@@ -201,6 +202,7 @@ h2 {
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5), inset 2px 2px 4px rgba(0,0,0,.5);
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);  
     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .cursong {
@@ -210,10 +212,10 @@ h2 {
 	text-align: center;
 	left: 32%;
 	top: 45%;
-    border: 8px solid blue;
+    border: 8px solid red;
     z-index: 1;
     cursor: pointer;
-    background-image: url(../img/colors.jpg);
+    background-image: url(../img/monstercat.jpg);
     background-position: center;
 }
 
@@ -221,9 +223,9 @@ h2 {
 	position: absolute;
 	left: -20%;
 	top: 45%;
-    border: 8px solid red;
+    border: 8px solid blue;
     z-index: 2;
-    background-image: url(../img/monstercat.jpg);
+    background-image: url(../img/colors.jpg);
     background-position: center;
 }
 
@@ -231,9 +233,9 @@ h2 {
 	position: absolute;
 	left: 82%;
 	top: 72%;
-    border: 8px solid green;
+    border: 8px solid purple;
     z-index: 3;
-    background-image: url(../img/zedd.jpg);
+    background-image: url(../img/raider.jpg);
     background-position: center;
 }
 
@@ -241,9 +243,10 @@ h2 {
 	position: absolute;
 	left: 82%;
 	top: 45%;
-    border: 8px solid purple;
+    border: 8px solid green;
     z-index: 2;
-    background-image: url(../img/raider.jpg);
+    background-image: url(../img/zedd.jpg);
+    
     background-position: center;
 }
 

@@ -59,7 +59,7 @@ h2 {
 	padding: 10px;
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-	background: #ffffff;
+	background: #231e43;
 }
 /* Mobile Menu */
 .mobile-header {
@@ -68,7 +68,7 @@ h2 {
 	display: block;
 	position: relative;
 	z-index: 30;
-	background: #ffffff;
+	background: #231e43;
 	z-index: 9999;
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
@@ -91,7 +91,7 @@ h2 {
 }
 .mobile-header ul li a {
 	margin: 0px;
-	padding: 20px 0px;
+	padding: 23px 0px;
 	width: auto;
 	display: block;
 	background: none;
@@ -100,7 +100,7 @@ h2 {
 	line-height: 12px;
 	color: #888888;
 	cursor: pointer;
-	border-right: 1px solid #eeeeee;
+	border-right: 1px solid #000000;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -112,11 +112,11 @@ h2 {
 .mobile-header ul li.active,
 .mobile-header ul li.active a {
 	color: #ffffff;
-	background: #77c043;
+	/*background: #317728;*/
 }
 .mobile-header ul li a:hover,
 .mobile-header ul li.active a {
-	border-right: 1px solid #63A832;
+	border-right: 1px solid #ffffff;
 }
 .mobile-header ul li a span.menu-open,
 .mobile-header ul li.active a span.menu-close {
@@ -131,7 +131,7 @@ h2 {
 	/* background: #222222; */
 	margin: 0px;
 	background: #222222;
-	padding: 10px;
+	padding: 12px;
 	max-width: 30%;
 	text-transform: none;
 	font-size: 12px;
@@ -144,6 +144,7 @@ h2 {
 	height: 100%;
 	overflow: hidden;
 	color: #ffffff;
+	-webkit-transform: translate3d(0,0,0);
 }
 .mobile-menu.active {
 	height: auto;
@@ -164,6 +165,7 @@ h2 {
 	-webkit-box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 1);
 	box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 1);
 	overflow: hidden;
+	-webkit-transform: translate3d(0,0,0);
 }
 .mobile-menu.active,
 .mobile-menu-bg.active {
@@ -174,7 +176,6 @@ h2 {
 	max-width: 100%;
 	max-height: 20%;
 	min-height: 20%;
-	background: blue;
 }
 
 .image-container img{
@@ -201,6 +202,8 @@ h2 {
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5), inset 2px 2px 4px rgba(0,0,0,.5);
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);  
     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);
+    -webkit-transform: translate3d(0,0,0);
+    z-index: 9995;
 }
 
 .cursong {
@@ -210,40 +213,40 @@ h2 {
 	text-align: center;
 	left: 32%;
 	top: 45%;
-    border: 8px solid blue;
-    z-index: 1;
+    border: 8px solid red;
     cursor: pointer;
-    background-image: url(../img/colors.jpg);
+    background-image: url(../img/monstercat.jpg);
     background-position: center;
+    z-index: 9995;
 }
 
 .prevsong {
 	position: absolute;
 	left: -20%;
 	top: 45%;
-    border: 8px solid red;
-    z-index: 2;
-    background-image: url(../img/monstercat.jpg);
+    border: 8px solid blue;
+    background-image: url(../img/colors.jpg);
     background-position: center;
+    z-index: 9995;
 }
 
 .shufflesong {
 	position: absolute;
 	left: 82%;
 	top: 72%;
-    border: 8px solid green;
-    z-index: 3;
-    background-image: url(../img/zedd.jpg);
+    border: 8px solid purple;
+    background-image: url(../img/raider.jpg);
     background-position: center;
+    z-index: 9995;
 }
 
 .sugsong {
 	position: absolute;
 	left: 82%;
 	top: 45%;
-    border: 8px solid purple;
-    z-index: 2;
-    background-image: url(../img/raider.jpg);
+    border: 8px solid green;
+    background-image: url(../img/zedd.jpg);
+    z-index: 9995;
     background-position: center;
 }
 

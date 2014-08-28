@@ -43,14 +43,28 @@ $(document).ready(function() {
 		}
 	}
 
-	$$('.cursong').tap(function(){
-		leftShift();
+	function rightShift() {
+		$('.prevsong').transition({ left: '-50%'}, { duration: 700, queue: false});
+		$('.prevsong').className = "old";
+		$('.cursong').transition({ left: '-20%' }, { duration: 1000, queue: false });
+		$('.cursong').className = "prevsong";
+
+		if (suggest == true) {
+			$('.sugsong').transition({ left: '32%' }, { duration: 1000, queue: false });
+			$('.sugsong').className = "cursong";
+		} else {
+			$('.shufflesong').transition({ left: '32%' }, { duration: 1000, queue: false });
+			$('.shufflesong').className = "cursong";
+		}
+	}
+
+	$$('.cursong').swipeLeft(function(){
+		alert("penis")
 	});
 
-	//$$('.cursong').tap(function(){
-	//	ev.innerHTML = 'right';
-	//	$('.cursong').transition({ left: '82%' }, { duration: 1000, queue: false });
-	//});
+	$$('.cursong').swipeRight(function(){
+		alert("cock")
+	});
 
 	$$('.cursong').drag(function(){
 		console.log("dragging");

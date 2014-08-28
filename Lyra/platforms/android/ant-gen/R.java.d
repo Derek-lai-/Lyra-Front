@@ -14,4 +14,17 @@
 /home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/res/drawable-ldpi/icon.png \
 /home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/res/drawable-port-hdpi/screen.png \
 /home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/res/drawable-mdpi/icon.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable/icon.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-land-xhdpi/screen.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-land-mdpi/screen.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-port-xhdpi/screen.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-port-mdpi/screen.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-hdpi/icon.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-port-ldpi/screen.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-ldpi/icon.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-port-hdpi/screen.png \
+/home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/res/drawable-mdpi/icon.png \
 /home/derek/Documents/development/Lyra-Front/Lyra/platforms/android/ant-build/AndroidManifest.xml \

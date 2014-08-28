@@ -28,29 +28,40 @@ $(document).ready(function() {
 	var votedown = false;
 	var suggest = true;
 
+	var alpha = document.getElementById('alpha');
+	var bravo = document.getElementById('bravo');
+	var charlie = document.getElementById('charlie');
+	var delta = document.getElementById('delta');
+	var echo = document.getElementById('echo');
+	var foxtrot = document.getElementById('foxtrot');
+
 	function leftShift() {
-		$('.prevsong').transition({ left: '-50%'}, { duration: 700, queue: false});
-		$('.prevsong').className = "old";
-		$('.cursong').transition({ left: '-20%' }, { duration: 1000, queue: false });
-		$('.cursong').className = "prevsong";
+		$(alpha).transition({ left: '-50%'}, { duration: 1000, queue: false});
+		$(alpha).className = "offscreen";
+		$(bravo).transition({ left: '-20%' }, { duration: 1000, queue: false });
+		$(bravo).className = "prevsong";
 
 		if (suggest == true) {
-			$('.sugsong').transition({ left: '32%' }, { duration: 1000, queue: false });
-			$('.sugsong').className = "cursong";
+			$(charlie).transition({ left: '32%' }, { duration: 1000, queue: false });
+			$(charlie).className = "cursong";
+			
+
 		} else {
-			$('.shufflesong').transition({ left: '32%' }, { duration: 1000, queue: false });
-			$('.shufflesong').className = "cursong";
+			$(delta).transition({ left: '32%' }, { duration: 1000, queue: false });
+			$(delta).className = "cursong";
 		}
 	}
 
+	var listorder = ("alpha", "bravo", "charlie", "delta", "echo");
+
 	$$('.cursong').tap(function(){
-		leftShift();
+		var x = $('cursong').offset().top;
+		var y = $('cursong')
 	});
 
-	//$$('.cursong').tap(function(){
-	//	ev.innerHTML = 'right';
-	//	$('.cursong').transition({ left: '82%' }, { duration: 1000, queue: false });
-	//});
+	$$('.cursong').swipeRight(function(){
+		alert("cock")
+	});
 
 	$$('.cursong').drag(function(){
 		console.log("dragging");
