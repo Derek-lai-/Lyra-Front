@@ -78,6 +78,7 @@ h2 {
 	padding: 0px;
 	z-index: 30;
 	list-style: none;
+	background: rgba(78,32,104,0.35);
 }
 .mobile-header ul li {
 	float: left;
@@ -260,6 +261,7 @@ h2 {
 	left: 27%;
 	top: 17%;
 	overflow: hidden;
+	z-index: 5;
 }
 
 .next-song{
@@ -274,5 +276,25 @@ h2 {
 	overflow: hidden;
 }
 
+#background{
+	background: #5b1a1a;
+	width: 100px;
+	height: 100px;
+	margin-top: 250px;
+	margin-left: 110px;
+	border-radius: 50%;
+	display: block;
+	z-index: 0;
+	position: absolute;
+	-webkit-transition-duration: 1s;
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease-out;
+}
 
+#background.open {
+	margin-top: -100px;
+	margin-left: -200px;
+	width: 900px;
+	height: 900px;
+}
 
