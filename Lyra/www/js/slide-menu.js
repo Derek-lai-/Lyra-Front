@@ -55,8 +55,7 @@ $(document).ready(function() {
 	var listorder = ("alpha", "bravo", "charlie", "delta", "echo");
 
 	$$('.cursong').tap(function(){
-		var x = $('cursong').offset().top;
-		var y = $('cursong')
+		//$('#background').addClass('open');
 	});
 
 	$$('.cursong').swipeRight(function(){
@@ -65,6 +64,10 @@ $(document).ready(function() {
 
 	$$('.cursong').drag(function(){
 		console.log("dragging");
+	});
+
+	$$('#container-inner').tap(function(){
+		$('#background').addClass('open');
 	});
 
 })
