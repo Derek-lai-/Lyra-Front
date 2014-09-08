@@ -22,6 +22,11 @@ $(document).ready(function() {
 	}
 	);
 
+	lyra.globals = { 
+		songList: new Array(), 
+		currentMedia: 'null'
+	};
+
 	var shiftleft = false;
 	var shiftright = false;
 	var voteup = false;
@@ -52,10 +57,34 @@ $(document).ready(function() {
 		}
 	}
 
+	$document.addEventListener('deviceready', function() {
+		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFIleSystemSuccess, fail);
+		}, false);
+
+	function onFileSystemSucess(fileSystem) {
+		fileSystem.root.getDirectory("Music", {create: false}, getDirSucess, fail);
+	}
+
+	function getDirSucess(dirEntry) {
+		var directoryReader = dirEntry.createReader();
+		directoryReader.readEntries(readerSucess,fail);
+	}
+
+	function readerSucess(entries) {
+		var i;
+		for (i=0; i<entries.length; i++) {
+			if (entries[i].name.indexOf(".mp3") != -1) {
+				lyra.globals.songList[i] = entries[1].fullPath;
+			}
+		}
+	}
+
+
 	var listorder = ("alpha", "bravo", "charlie", "delta", "echo");
 
+
 	$$('.cursong').tap(function(){
-		//$('#background').addClass('open');
+		
 	});
 
 	$$('.cursong').swipeRight(function(){
