@@ -1,4 +1,26 @@
 $(document).ready(function() {
+	$(".m-menu").click(function(){
+	
+		$("#container").toggleClass("active");
+		$(".m-menu").toggleClass("active");
+		$(".mobile-menu").toggleClass("active");
+		$(".mobile-menu-bg").addClass("active");
+	});
+	
+	$(".mobile-menu").css('left','-36%');
+	$(".mobile-menu-bg").css('left','-36%');
+	$(".m-menu").toggle(function() {
+		$('.mobile-menu').transition({ left: '0' }, { duration: 700, queue: false });
+		$('.mobile-menu-bg').transition({ left: '0' }, { duration: 700, queue: false });
+		$('#container').transition({ 'margin-left': '36%' }, { duration: 700, queue: false });
+		$('#container').transition({ 'margin-right': '-36%' }, { duration: 700, queue: false });
+	}, function() {       
+		$('.mobile-menu-bg').transition({ left: '-36%' }, { duration: 700, queue: false });
+		$('.mobile-menu').transition({ left: '-36%' }, { duration: 700, queue: false });
+		$('#container').transition({ 'margin-left': '0' }, { duration: 700, queue: false });
+		$('#container').transition({ 'margin-right': '0' }, { duration: 700, queue: false });
+	}
+	);
 
 	var shiftleft = false;
 	var shiftright = false;
@@ -32,13 +54,8 @@ $(document).ready(function() {
 
 	var listorder = ("alpha", "bravo", "charlie", "delta", "echo");
 
-	var snapper = new Snap({
-		element: document.getElementById('content')
-	});
-
-
-	$$('.cursong').swipeLeft(function(){
-		
+	$$('.cursong').tap(function(){
+		//$('#background').addClass('open');
 	});
 
 	$$('.cursong').swipeRight(function(){

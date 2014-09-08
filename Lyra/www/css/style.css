@@ -59,9 +59,8 @@ h2 {
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	background: #231e43;
-	position: relative;
 }
-/* Mobile Menu 
+/* Mobile Menu */
 .mobile-header {
 	line-height: 100%;
 	width: 100%;
@@ -113,6 +112,7 @@ h2 {
 .mobile-header ul li.active,
 .mobile-header ul li.active a {
 	color: #ffffff;
+	/*background: #317728;*/
 }
 .mobile-header ul li a:hover,
 .mobile-header ul li.active a {
@@ -126,8 +126,9 @@ h2 {
 .mobile-header ul li a span.menu-close {
 	display: none;
 }
-
+/* Mobile Menu */
 .mobile-menu {
+	/* background: #222222; */
 	margin: 0px;
 	background: #222222;
 	padding: 12px;
@@ -137,7 +138,7 @@ h2 {
 	position: fixed;
 	top: 9%;
 	bottom: 0px;
-	left: -40%;
+	left: -40%;/* Hides Brief Menu Popup As JavaScript Loads */
 	z-index: 9998;
 	display: block;
 	height: 100%;
@@ -157,7 +158,7 @@ h2 {
 	max-width: 30%;
 	top: 9%;
 	bottom: 0px;
-	left: -40%
+	left: -40%/* Hides Brief Menu Popup As JavaScript Loads */
 	z-index: 9997;
 	display: block;
 	height: 100%;
@@ -166,77 +167,13 @@ h2 {
 	overflow: hidden;
 	-webkit-transform: translate3d(0,0,0);
 }
-
 .mobile-menu.active,
 .mobile-menu-bg.active {
 	display: block;
 }
-*/
- /*Snap JS*/
- .snap-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    z-index: 2;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-.snap-drawers {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-}
-.snap-drawer {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: auto;
-    width: 265px;
-    height: auto;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transition: width 0.3s ease;
-    -moz-transition: width 0.3s ease;
-    -ms-transition: width 0.3s ease;
-    -o-transition: width 0.3s ease;
-    transition: width 0.3s ease;
-}
-.snap-drawer-left {
-    left: 0;
-    z-index: 1;
-}
-.snap-drawer-right {
-    right: 0;
-    z-index: 1;
-}
-.snapjs-left .snap-drawer-right, .snapjs-right .snap-drawer-left {
-    display: none;
-}
-.snapjs-expand-left .snap-drawer-left, .snapjs-expand-right .snap-drawer-right {
-    width: 30%;
-}
-
-#content{
-    background: white;
-}
-/* End Snap.js */
 
 .image-container{
-	max-width: 22%;
+	max-width: 100%;
 	max-height: 20%;
 	min-height: 20%;
 }
@@ -267,7 +204,6 @@ h2 {
     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);
     -webkit-transform: translate3d(0,0,0);
     z-index: 9995;
-    overflow: hidden;
 }
 
 .cursong {
@@ -282,7 +218,6 @@ h2 {
     background-image: url(../img/monstercat.jpg);
     background-position: center;
     z-index: 9995;
-    overflow: hidden;
 }
 
 .prevsong {
@@ -293,7 +228,6 @@ h2 {
     background-image: url(../img/colors.jpg);
     background-position: center;
     z-index: 9995;
-    overflow: hidden;
 }
 
 .shufflesong {
@@ -304,7 +238,6 @@ h2 {
     background-image: url(../img/raider.jpg);
     background-position: center;
     z-index: 9995;
-    overflow: hidden;
 }
 
 .sugsong {
@@ -315,7 +248,6 @@ h2 {
     background-image: url(../img/zedd.jpg);
     z-index: 9995;
     background-position: center;
-    overflow: hidden;
 }
 
 #container-cursong {
