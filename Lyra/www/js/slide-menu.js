@@ -22,7 +22,7 @@ $(document).ready(function() {
 	}
 	);
 
-	lyra.globals = { 
+	globals = { 
 		songList: new Array(), 
 		currentMedia: 'null'
 	};
@@ -57,9 +57,9 @@ $(document).ready(function() {
 		}
 	}
 
-	$document.addEventListener('deviceready', function() {
-		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFIleSystemSuccess, fail);
-		}, false);
+	$(document).addEventListener('deviceready', function () {
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+        }, false);
 
 	function onFileSystemSucess(fileSystem) {
 		fileSystem.root.getDirectory("Music", {create: false}, getDirSucess, fail);
@@ -74,17 +74,20 @@ $(document).ready(function() {
 		var i;
 		for (i=0; i<entries.length; i++) {
 			if (entries[i].name.indexOf(".mp3") != -1) {
-				lyra.globals.songList[i] = entries[1].fullPath;
+				globals.songList[i] = entries[1].fullPath;
 			}
 		}
 	}
+
 
 
 	var listorder = ("alpha", "bravo", "charlie", "delta", "echo");
 
 
 	$$('.cursong').tap(function(){
-		
+		for (i=0; counter<lyra.globals.songList.length; counter ++) {
+			console.log(lyra.globals.songList[i]);
+		}
 	});
 
 	$$('.cursong').swipeRight(function(){
