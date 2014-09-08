@@ -78,7 +78,6 @@ h2 {
 	padding: 0px;
 	z-index: 30;
 	list-style: none;
-	background: rgba(78,32,104,0.35);
 }
 .mobile-header ul li {
 	float: left;
@@ -328,7 +327,6 @@ h2 {
 	left: 27%;
 	top: 17%;
 	overflow: hidden;
-	z-index: 5;
 }
 
 .next-song{
@@ -368,4 +366,5 @@ h2 {
 	height: 800px;
 	overflow: hidden;
 }
+
 
