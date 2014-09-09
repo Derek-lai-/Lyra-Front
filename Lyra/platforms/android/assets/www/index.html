@@ -5,12 +5,15 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <!-- START Javascript -->
+        <script type="text/javascript" src="cordova-1.8"
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/slide-menu.js"></script>
         <script type="text/javascript" src="js/quo.js"></script>
         <script type="text/javascript" src="js/transit.min.js"></script>
         <!-- START CSS -->
         <link href='css/style.css' rel='stylesheet' type='text/css'>
+        <link href='css/spinner.css' rel='stylesheet' type='text/css'>
+        <link href='css/main.css' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!-- Header START -->
@@ -47,11 +50,11 @@
                 <div id="container-inner">
                     <div id="container-cursong">
                         <div id="cursong-info">
-                            <h3> Current Song Name</h3>
+                            <h3> Braken - To The Stars</h3>
                         </div>
 
                         <div id="song-progress">
-                            <p>00:00/00:00</p>
+                            <p>1:26/3:26</p>
                         </div>
 
                         <div id="sliderbar">
@@ -61,21 +64,26 @@
                     </div>
 
                     <div class="player-buttons">
-                        <div id="alpha" class="cursong"></div>
 
-                        <div id="bravo" class="sugsong"></div>
+                        <div id="alpha" class="prevsong"></div> 
 
-                        <div id="charlie" class="shufflesong"></div>
-                        
-                        <div id="delta" class="prevsong"></div> 
+                        <div id="bravo" class="cursong"></div>
+
+                        <div id="charlie" class="sugsong"></div>
+
+                        <div id="delta" class="shufflesong"></div>
 
                         <div id="echo" class="offscreen"></div>
+
+                        <div id="foxtrot" class="offscreen2"></div>
+						
+						<div id="background"></div>
                     </div>
                     
                     <div class="next-Song">
                         <div>
                             <h3>Upcoming Song:</h3>
-                            <p id="next-name">Song Name</p>
+                            <p id="next-name">Zedd - The Legend of Zelda</p>
                         </div>
 
                     </div>

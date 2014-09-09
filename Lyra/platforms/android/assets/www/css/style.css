@@ -1,11 +1,12 @@
 /* Reset */
 * {
-	background: #231e43;
+	background: transparent;
 	border: 0px;
 	margin: 0px;
 	padding: 0px;
 	font-family: inherit;
 	overflow: hidden;
+	color: white;
 }
 body {
 	width: 100%;
@@ -27,7 +28,7 @@ p {
 h1,
 h2 {
 	font-family: 'Open Sans', sans-serif;
-	line-height: 150%;
+	line-height: 150%;ontain
 	color: #ffffff;
 	padding: 20px;
 }
@@ -50,13 +51,14 @@ h2 {
 	max-width: 100%;
 	overflow: hidden;
 	display: block;
+
 }
 #container-inner {
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	display: block;
-	padding: 10px;
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 	background: #231e43;
@@ -78,6 +80,7 @@ h2 {
 	padding: 0px;
 	z-index: 30;
 	list-style: none;
+	background: rgba(78,32,104,0.35);
 }
 .mobile-header ul li {
 	float: left;
@@ -91,16 +94,15 @@ h2 {
 }
 .mobile-header ul li a {
 	margin: 0px;
-	padding: 20px 0px;
+	padding: 23px 0px;
 	width: auto;
 	display: block;
 	background: none;
 	text-align: center;
 	font-size: 12px;
 	line-height: 12px;
-	color: #888888;
 	cursor: pointer;
-	border-right: 1px solid #eeeeee;
+	border-right: 1px solid #000000;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -112,11 +114,10 @@ h2 {
 .mobile-header ul li.active,
 .mobile-header ul li.active a {
 	color: #ffffff;
-	/*background: #317728;*/
 }
 .mobile-header ul li a:hover,
 .mobile-header ul li.active a {
-	border-right: 1px solid #63A832;
+	border-right: 1px solid #ffffff;
 }
 .mobile-header ul li a span.menu-open,
 .mobile-header ul li.active a span.menu-close {
@@ -131,7 +132,7 @@ h2 {
 	/* background: #222222; */
 	margin: 0px;
 	background: #222222;
-	padding: 10px;
+	padding: 12px;
 	max-width: 30%;
 	text-transform: none;
 	font-size: 12px;
@@ -147,7 +148,7 @@ h2 {
 	-webkit-transform: translate3d(0,0,0);
 }
 .mobile-menu.active {
-	height: auto;
+	height: fixed;
 	overflow: visible;
 }
 .mobile-menu-bg {
@@ -182,7 +183,7 @@ h2 {
 	position: relative;
 	padding: 3px;
 	margin: 3px;
-	height: 100%;
+	height: 90%;
 	width: 100%;
 }
 /* Floats */
@@ -195,6 +196,7 @@ h2 {
 .cursong, .prevsong, .shufflesong, .sugsong {
     width: 35%;
     height: 22%;
+    position: relative;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
@@ -203,6 +205,7 @@ h2 {
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);  
     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 4px rgba(0,0,0,.5);
     -webkit-transform: translate3d(0,0,0);
+    z-index: 9995;
 }
 
 .cursong {
@@ -211,42 +214,41 @@ h2 {
 	position: absolute;
 	text-align: center;
 	left: 32%;
-	top: 45%;
+	top: 40%;
     border: 8px solid red;
-    z-index: 1;
     cursor: pointer;
     background-image: url(../img/monstercat.jpg);
     background-position: center;
+    z-index: 9995;
 }
 
 .prevsong {
 	position: absolute;
 	left: -20%;
-	top: 45%;
+	top: 40%;
     border: 8px solid blue;
-    z-index: 2;
     background-image: url(../img/colors.jpg);
     background-position: center;
+    z-index: 9995;
 }
 
 .shufflesong {
 	position: absolute;
 	left: 82%;
-	top: 72%;
+	top: 65%;
     border: 8px solid purple;
-    z-index: 3;
     background-image: url(../img/raider.jpg);
     background-position: center;
+    z-index: 9995;
 }
 
 .sugsong {
 	position: absolute;
 	left: 82%;
-	top: 45%;
+	top: 40%;
     border: 8px solid green;
-    z-index: 2;
     background-image: url(../img/zedd.jpg);
-    
+    z-index: 9995;
     background-position: center;
 }
 
@@ -259,7 +261,7 @@ h2 {
 	margin-right: auto;
 	left: 27%;
 	top: 17%;
-	overflow: hidden;
+	z-index: 5;
 }
 
 .next-song{
@@ -274,5 +276,25 @@ h2 {
 	overflow: hidden;
 }
 
+#background{
+	visibility: hidden;
+	background: #570313;
+	border-radius: 50%;
+	margin-left: -22%;
+	margin-top: -40%;
+	width: 150%;
+	height: 150%;
+	z-index: 0;
+	position: relative;
+	-webkit-transition-duration: 1s;
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: scale(0,0);
+}
 
+#background.open {
+	visibility: visible;
+	-webkit-transform: scale(1,1);
+}
 

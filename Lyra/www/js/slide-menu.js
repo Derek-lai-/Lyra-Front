@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	
+	document.addEventListener("deviceready", function(){
+      	alert("123");
+ 	},true);
+
 	$(".m-menu").click(function(){
 	
 		$("#container").toggleClass("active");
@@ -27,11 +32,31 @@ $(document).ready(function() {
 		currentMedia: 'null'
 	};
 
-	var shiftleft = false;
-	var shiftright = false;
-	var voteup = false;
-	var votedown = false;
-	var suggest = true;
+	function onDeviceReady() {
+		console.log("penis");
+		//window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+    }
+
+	function onFileSystemSucess(fileSystem) {
+		console.log("Checkpoint 1");
+		fileSystem.root.getDirectory("Music", {create: false}, getDirSucess, fail);
+	}
+
+	function getDirSucess(dirEntry) {
+		console.log("Checkpoint 2");
+		var directoryReader = dirEntry.createReader();
+		directoryReader.readEntries(readerSucess,fail);
+	}
+
+	function readerSucess(entries) {
+		var i;
+		console.log("Checkpoint 3");
+		for (i=0; i<entries.length; i++) {
+			if (entries[i].name.indexOf(".mp3") != -1) {
+				globals.songList[i] = entries[1].fullPath;
+			}
+		}
+	}
 
 	var alpha = document.getElementById('alpha');
 	var bravo = document.getElementById('bravo');
@@ -57,36 +82,16 @@ $(document).ready(function() {
 		}
 	}
 
-	$(document).addEventListener('deviceready', function () {
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
-        }, false);
-
-	function onFileSystemSucess(fileSystem) {
-		fileSystem.root.getDirectory("Music", {create: false}, getDirSucess, fail);
-	}
-
-	function getDirSucess(dirEntry) {
-		var directoryReader = dirEntry.createReader();
-		directoryReader.readEntries(readerSucess,fail);
-	}
-
-	function readerSucess(entries) {
-		var i;
-		for (i=0; i<entries.length; i++) {
-			if (entries[i].name.indexOf(".mp3") != -1) {
-				globals.songList[i] = entries[1].fullPath;
-			}
-		}
-	}
-
 
 
 	var listorder = ("alpha", "bravo", "charlie", "delta", "echo");
 
 
 	$$('.cursong').tap(function(){
-		for (i=0; counter<lyra.globals.songList.length; counter ++) {
-			console.log(lyra.globals.songList[i]);
+		console.log("test");
+		var i;
+		for (i=0; i<globals.songList.length; i++) {
+			console.log(String(globals.songList[i]));
 		}
 	});
 
