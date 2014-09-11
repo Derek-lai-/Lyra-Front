@@ -1,8 +1,4 @@
 $(document).ready(function() {
-	
-	document.addEventListener("deviceready", function(){
-      	alert("123");
- 	},true);
 
 	$(".m-menu").click(function(){
 	
@@ -32,9 +28,11 @@ $(document).ready(function() {
 		currentMedia: 'null'
 	};
 
+	document.addEventListener("deviceready", onDeviceReady, false);
+
 	function onDeviceReady() {
 		console.log("penis");
-		//window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
     }
 
 	function onFileSystemSucess(fileSystem) {
