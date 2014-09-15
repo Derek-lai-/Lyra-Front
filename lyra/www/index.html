@@ -19,83 +19,143 @@
     <body>
         <!-- Complete container -->
         <div class="lyra-container">
-            <!-- Mobile Header START -->
-            <div class="mobile-header">
-                <ul class="clearfloat">
-                    <li class="m-menu">
-                        <a>
-                            <span class="menu-open">Lyra</span>
-                            <span class="menu-close">Lyra</span>
-                        </a>
-                    </li>
-                </ul>
+
+            <!-- Sidebar Start -->
+            <div class="snap-drawers">
+                <div class="snap-drawer snap-drawer-left">
+
+                    <div id="profile">
+                        <img id="profile-img" src=""/>
+                        <p id="profile-name"></p>
+                    </div>
+
+                    <ul>
+                        <li class="side-link" data-page="signin">
+                            <p><i class="fa fa-lg"></i>Sign In</p>
+                        </li>
+
+                        <li class="side-link" data-page="playlist">
+                            <p><i class="fa fa-lg"></i>Playlists</p>
+                        </li>
+
+                        <li class="side-link" data-page="library">
+                            <p><i class="fa fa-lg"></i>Library</p>
+                        </li>
+
+                        <li class="side-link" data-page="favorites">
+                            <p><i class="fa fa-lg"></i>Favorites</p>
+                        </li>
+
+                        <li class="side-link" data-page="settings">
+                            <p><i class="fa fa-lg"></i>Settings</p>
+                        </li>
+
+                        <li class="side-link" data-page="about">
+                            <p><i class="fa fa-lg"></i>About</p>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
-            <!-- Mobile Header END -->
+            <!-- Sidebar END -->
 
-            <div id="container-outer">
-                <!-- Sidebar Start -->
-                <div class="sidebar-menu">
-                    <div class="image-container">
-                        <img src="img/logo.png">
-                    </div>
-                    <div class="menu-items">
-                        <div class="tile" data-page="recent"><p>Sign In</p></div>
-                        <div class="tile" data-page="recent"><p>Recent</p></div>
-                        <div class="tile" data-page="favorites"><p>Favorites</p></div>
-                        <div class="tile" data-page="Library"><p>My Library</p></div>
-                        <div class="tile" data-page="playlist"><p>Playlists</p></div>
-                        <div class="tile" data-page="settings"><p>Settings</p></div>
-                        <div class="tile" data-page="feedback"><p>Feedback</p></div>
-                        <div class="tile" data-page="feedback"><p>About</p></div>
-                    </div>
+            <div id="outer-container" class="snap-content">
+
+                <div id="header">
+                    <i id="toolbar-menu" class="fa fa-lg fa-bars"></i>
+                    <h1>Lyra</h1>
                 </div>
-                <!-- Sidebar END -->
 
-                <!-- SongInfo START -->
-                <div id="songinfo-container">
-                    <div id="cursong-info">
-                        <h3>Current Song</h3>
-                    </div>
+                <div id="pages">
 
-                    <div id="song-progress">
-                        <p>00:00/00:00</p>
-                    </div>
+                    <!-- MAIN PAGE -->
+                    <div class="page" data-page="main">
 
-                    <div id="slidebar">
-                        <input type="range" min="0" max"200" value="0"/>
+                        <!-- SongInfo START -->
+                        <div id="songinfo-container">
+                            <div id="cursong-info">
+                                <h3>Current Song</h3>
+                            </div>
+
+                            <div id="song-progress">
+                                <p>00:00/00:00</p>
+                            </div>
+
+                            <div id="slidebar">
+                                <input type="range" min="0" max"200" value="0"/>
+                            </div>
+                        </div>
+                        <!-- SongInfo END -->
+
+                        <!-- SongControls START -->
+                        <div class="player-buttons">
+
+                            <div id="alpha" class="prevsong"></div> 
+
+                            <div id="bravo" class="cursong"></div>
+
+                            <div id="charlie" class="sugsong"></div>
+
+                            <div id="delta" class="shufflesong"></div>
+
+                            <div id="echo" class="offscreen"></div>
+
+                            <div id="foxtrot" class="offscreen2"></div>
+                            
+                            <div id="background-expand"></div>
+                        </div>
+                        <!-- SongControls END -->
+
+                        <!-- Next Song Info START -->
+                        <div class="next-Song">
+                            <div>
+                                <h3>Upcoming Song:</h3>
+                                <p id="next-name">Zedd - The Legend of Zelda</p>
+                            </div>
+
+                        </div>
+                        <!-- Next Song Info END -->
                     </div>
+                    <!-- MAIN PAGE END -->
+
+                    <!-- Sign In START -->
+                    <div class="page" data-page"signin">
+                        Signin
+                    </div>
+                    <!-- Sign In END -->
+
+                    <!-- Playlist START -->
+                    <div class="page" data-page"signin">
+                        Signin
+                    </div>
+                    <!-- Playlist END -->
+
+                    <!-- Library START -->
+                    <div class="page" data-page"signin">
+                        Signin
+                    </div>
+                    <!-- Library END -->
+
+                    <!-- Favorites START -->
+                    <div class="page" data-page"signin">
+                        Signin
+                    </div>
+                    <!-- Favorites END -->
+
+                    <!-- Settings START -->
+                    <div class="page" data-page"signin">
+                        Signin
+                    </div>
+                    <!-- Settings END -->
+
+                    <!-- About START -->
+                    <div class="page" data-page"signin">
+                        Signin
+                    </div>
+                    <!-- About END -->
+
+
                 </div>
-                <!-- SongInfo END -->
-
-                <!-- SongControls START -->
-                 <div class="player-buttons">
-
-                    <div id="alpha" class="prevsong"></div> 
-
-                    <div id="bravo" class="cursong"></div>
-
-                    <div id="charlie" class="sugsong"></div>
-
-                    <div id="delta" class="shufflesong"></div>
-
-                    <div id="echo" class="offscreen"></div>
-
-                    <div id="foxtrot" class="offscreen2"></div>
-                    
-                    <div id="background-expand"></div>
-                </div>
-                <!-- SongControls END -->
-
-                <!-- Next Song Info START -->
-                <div class="next-Song">
-                    <div>
-                        <h3>Upcoming Song:</h3>
-                        <p id="next-name">Zedd - The Legend of Zelda</p>
-                    </div>
-
-                </div>
-                <!-- Next Song Info END -->
-            </div>
 
         </div>
     </body>
