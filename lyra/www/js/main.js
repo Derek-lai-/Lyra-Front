@@ -3,19 +3,24 @@ $(document).ready(appReady);
 function appReady() {
 
 	var snapper = new Snap({
-		element: document.getElementById("content"),
+		element: document.getElementById("snap-drawers"),
 		touchToDrag: false,
-		disable: "right"
+		disable: "right",
+		maxPosition: 300,
+		hyperextensible: false,
+		slideIntent: 20,
+
 	});
 
 	$(document).on("click", "#toolbar-menu", function(){
-		snapper.open("left")
+		snapper.open("left");
 	});
 
 	snapper.on("animated", function(){
 		$("body").width("0%").width("100%");
 	});
 
+	snapper.close();
 	var currPage = "";
 	var pageStack = new Array();
 
