@@ -1,10 +1,9 @@
-$(document).ready(appReady);
+$(document).ready(ready);
 
-function appReady() {
+function ready() {
 
 	var snapper = new Snap({
-		element: document.getElementById("snap-drawers"),
-		touchToDrag: false,
+		element: document.getElementById("content"),
 		disable: "right",
 		maxPosition: 300,
 		hyperextensible: false,
@@ -20,12 +19,11 @@ function appReady() {
 		$("body").width("0%").width("100%");
 	});
 
-	snapper.close();
 	var currPage = "";
 	var pageStack = new Array();
 
 
-	$$(document).on("tap", ".side-link", function(event){
+	$$(document).on("touchstart", ".side-link", function(event){
 		event.stopPropagation();
 		event.preventDefault();
 		if (event.handled !== true) {

@@ -127,9 +127,10 @@ ul {
 
 }
 
-#outer-container {
+#content{
 	height: 100%;
 	width: 100%;
+	background: transparent;
 }
 
 .snap-drawer ul {
@@ -165,7 +166,7 @@ ul {
 #profile {
 	height: 50px;
 	padding: 15px 0;
-	background: grey;
+	background: green;
 }
 
 #toolbar-menu {
