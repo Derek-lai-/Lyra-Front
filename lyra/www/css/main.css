@@ -44,7 +44,7 @@ ul {
 	list-style-type: none;
 }
 
-.lyra-container {
+.lyra {
 	width: 100%;
 	height: 100%;
 	background: #641A99;
@@ -85,7 +85,7 @@ ul {
 	left: 32%;
 	top: 40%;
     border: 8px solid red;
-    background-image: url(../img/monstercat.jpg);
+    /*background-image: url(../img/monstercat.jpg);*/
     background-position: center;
     
 }
@@ -95,7 +95,7 @@ ul {
 	left: -20%;
 	top: 40%;
     border: 8px solid blue;
-    background-image: url(../img/colors.jpg);
+    /*background-image: url(../img/colors.jpg);*/
     background-position: center;
 }
 
@@ -104,7 +104,7 @@ ul {
 	left: 82%;
 	top: 68%;
     border: 8px solid purple;
-    background-image: url(../img/raider.jpg);
+    /*background-image: url(../img/raider.jpg);*/
     background-position: center;
 }
 
@@ -113,7 +113,7 @@ ul {
 	left: 82%;
 	top: 40%;
     border: 8px solid green;
-    background-image: url(../img/zedd.jpg);
+    /*background-image: url(../img/zedd.jpg);*/
     background-position: center;
 }
 
@@ -156,21 +156,19 @@ ul {
 	box-shadow: 0px 0 10px 0px #888;
 }
 
-.snap-drawers {
-	height: 100%;
+.snap-drawer, .snap-drawer-left {
 	width: 35%;
 	background: black;
 	z-index: 6000;
-
 }
 
 #profile {
 	height: 50px;
 	padding: 15px 0;
-	background: white;
+	background: black;
 }
 
-#toolbar {
+#toolbar-menu {
 	background: #6CACE4;
 	position: fixed;
 	z-index: 3;
@@ -181,7 +179,7 @@ ul {
 	height: 44px;
 }
 
-#toolbar h1 {
+#toolbar-menu h1 {
 	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: 100; letter-spacing: 1px;
 	color: #fff;
 	font-size: 16px;
@@ -195,7 +193,7 @@ ul {
 	height: 44px;
 }
 
-#toolbar i {
+#toolbar-menu i {
 	position: absolute;
 	top: 15px;
 }
