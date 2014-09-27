@@ -5,13 +5,13 @@ function ready() {
 	var snapper = new Snap({
 		element: document.getElementById("content"),
 		disable: "right",
-		maxPosition: 300,
+		maxPosition: 156,
 		hyperextensible: false,
-		slideIntent: 20,
+		touchToDrag: false,
 
 	});
 
-	$(document).on("click", "#toolbar-menu", function(){
+	$(document).on("click", "#menu-button", function(){
 		snapper.open("left");
 	});
 

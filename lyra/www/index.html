@@ -16,8 +16,6 @@
     <body>
         <!-- Complete container -->
         <div class="lyra">
-            <div class="background">
-            </div>
             <!-- Sidebar Start -->
             <div class="snap-drawers">
                 <div class="snap-drawer snap-drawer-left">
@@ -60,8 +58,11 @@
                 <div id="content" class="snap-content">
 
                     <div id="header">
-                        <i id="toolbar-menu" class="fa fa-lg fa-bars"></i>
-                        <h2 class="title">Lyra</h2>
+                        <div class="toolbar-container">
+                            <ul class="toolbar-menu">
+                                <li id="menu-button">Lyra</li>
+                            </ul>
+                          </div>
                     </div>
 
                     <div id="pages">
@@ -105,7 +106,7 @@
                             <!-- SongControls END -->
 
                             <!-- Next Song Info START -->
-                            <div class="next-Song">
+                            <div id="next-container">
                                 <div>
                                     <h3>Upcoming Song:</h3>
                                     <p id="next-name">Zedd - The Legend of Zelda</p>
@@ -116,37 +117,37 @@
                         </div>
                         <!-- MAIN PAGE END -->
 
-                        <!-- Sign In START -->
+                        <!-- Sign In START 
                         <div class="page" data-page"signin">
                             Signin
                         </div>
-                        <!-- Sign In END -->
+                         Sign In END -->
 
-                        <!-- Playlist START -->
+                        <!-- Playlist START 
                         <div class="page" data-page"playlist">
                             Playlist
                         </div>
-                        <!-- Playlist END -->
+                        Playlist END -->
 
-                        <!-- Library START -->
+                        <!-- Library START 
                          <div class="page" data-page"library">
                             My Library
                         </div>
-                        <!-- Library END -->
+                         Library END -->
 
-                        <!-- Favorites START -->
+                        <!-- Favorites START --
                         <div class="page" data-page"favorites">
                             Favorites
                         </div>
                         <!-- Favorites END -->
 
-                        <!-- Settings START -->
+                        <!-- Settings START --
                         <div class="page" data-page"setting">
                             Settings
                         </div>
                         <!-- Settings END -->
 
-                        <!-- About START -->
+                        <!-- About START --
                         <div class="page" data-page"about">
                             About
                         </div>
