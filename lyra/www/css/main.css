@@ -62,7 +62,10 @@ ul {
 	visibility: hidden;
 }
 
+/* -------------------- Circle Container Start -------------------- */
+
 .cursong, .prevsong, .shufflesong, .sugsong {
+	position: absolute;
     width: 35%;
     height: 20%;
     -moz-border-radius: 100%;
@@ -76,45 +79,52 @@ ul {
     z-index: 500;
 }
 
-.cursong {
-	margin-left: auto;
-	margin-right: auto;
-	position: absolute;
-	text-align: center;
-	left: 32%;
-	top: 40%;
-    border: 8px solid #FF6666;
+#alpha{
+	border: 8px solid #FF6666;
     /*background-image: url(../img/monstercat.jpg);*/
     background-position: center;
-    
 }
 
-.prevsong {
-	position: absolute;
-	left: -20%;
-	top: 40%;
-    border: 8px solid #6666FF;
+#bravo{
+	border: 8px solid #6666FF;
     /*background-image: url(../img/colors.jpg);*/
     background-position: center;
+
 }
 
-.shufflesong {
-	position: absolute;
-	left: 82%;
-	top: 68%;
-    border: 8px solid #FF66FF;
+#charlie{
+	border: 8px solid #FF66FF;
     /*background-image: url(../img/raider.jpg);*/
     background-position: center;
 }
 
-.sugsong {
-	position: absolute;
-	left: 82%;
-	top: 40%;
-    border: 8px solid #66FF66;
+#delta{
+	border: 8px solid #66FF66;
     /*background-image: url(../img/zedd.jpg);*/
     background-position: center;
 }
+
+.cursong {
+	left: 32%;
+	top: 40%;
+}
+
+.prevsong {
+	left: -20%;
+	top: 40%;
+}
+
+.shufflesong {
+	left: 82%;
+	top: 68%;
+}
+
+.sugsong {
+	left: 82%;
+	top: 40%
+}
+
+/* -------------------- Circle Containers End -------------------- */
 
 #content{
 	height: 100%;
