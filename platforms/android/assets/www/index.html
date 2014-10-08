@@ -1,172 +1,46 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-       
-        <!-- START CSS -->
-        <link rel="stylesheet" type="text/css" href="css/snap.css" />
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <!-- END CSS -->
-        
-        <title>Lyra</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
     </head>
     <body>
-        <!-- Complete container -->
-        <div class="lyra">
-            <!-- Sidebar Start -->
-            <div class="snap-drawers">
-                <div class="snap-drawer snap-drawer-left">
-
-                    <div id="profile">
-                        <img id="profile-img" src=""/>
-                        <p id="profile-name"></p>
-                    </div>
-
-                    <ul>
-                        <li class="side-link" data-page="signin">
-                            <p><i class="fa fa-lg"></i>Sign In</p>
-                        </li>
-
-                        <li class="side-link" data-page="playlist">
-                            <p><i class="fa fa-lg"></i>Playlists</p>
-                        </li>
-
-                        <li class="side-link" data-page="library">
-                            <p><i class="fa fa-lg"></i>Library</p>
-                        </li>
-
-                        <li class="side-link" data-page="favorites">
-                            <p><i class="fa fa-lg"></i>Favorites</p>
-                        </li>
-
-                        <li class="side-link" data-page="settings">
-                            <p><i class="fa fa-lg"></i>Settings</p>
-                        </li>
-
-                        <li class="side-link" data-page="about">
-                            <p><i class="fa fa-lg"></i>About</p>
-                        </li>
-                    </ul>
-
-                </div>
-            
-                <!-- Sidebar END -->
-
-                <div id="content" class="snap-content">
-
-                    <div id="header">
-                        <div class="toolbar-container">
-                            <ul class="toolbar-menu">
-                                <li id="menu-button">Lyra</li>
-                            </ul>
-                          </div>
-                    </div>
-
-                    <div id="pages">
-
-                        <!-- MAIN PAGE -->
-                        <div class="page" data-page="main">
-
-                            <!-- SongInfo START -->
-                            <div id="songinfo-container">
-                                <div id="cursong-info">
-                                    <h3>Current Song</h3>
-                                </div>
-
-                                <div id="song-progress">
-                                    <p>00:00/00:00</p>
-                                </div>
-
-                                <div id="slidebar">
-                                    <input type="range" min="0" max"200" value="0"/>
-                                </div>
-                            </div>
-                            <!-- SongInfo END -->
-
-                            <!-- SongControls START -->
-                            <div class="player-buttons">
-
-                                <div id="alpha" class="prevsong"></div> 
-
-                                <div id="bravo" class="cursong"></div>
-
-                                <div id="charlie" class="sugsong"></div>
-
-                                <div id="delta" class="shufflesong"></div>
-
-                                <div id="echo" class="offscreen"></div>
-
-                                <div id="foxtrot" class="offscreen2"></div>
-                                
-                                <div id="expand"></div>
-                            </div>
-                            <!-- SongControls END -->
-
-                            <!-- Next Song Info START -->
-                            <div id="next-container">
-                                <div>
-                                    <h3>Upcoming Song:</h3>
-                                    <p id="next-name">Zedd - The Legend of Zelda</p>
-                                </div>
-
-                            </div>
-                            <!-- Next Song Info END -->
-                        </div>
-                        
-                        <!-- MAIN PAGE END -->
-
-                        <!-- Sign In START 
-                        <div class="page" data-page"signin">
-                            Signin
-                        </div>
-                         Sign In END -->
-
-                        <!-- Playlist START 
-                        <div class="page" data-page"playlist">
-                            Playlist
-                        </div>
-                        Playlist END -->
-
-                        <!-- Library START 
-                         <div class="page" data-page"library">
-                            My Library
-                        </div>
-                         Library END -->
-
-                        <!-- Favorites START 
-                        <div class="page" data-page"favorites">
-                            Favorites
-                        </div>
-                        Favorites END -->
-
-                        <!-- Settings START 
-                        <div class="page" data-page"setting">
-                            Settings
-                        </div>
-                         Settings END -->
-
-                        <!-- About START 
-                        <div class="page" data-page"about">
-                            About
-                        </div>
-                         About END -->
-
-
-                </div>
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
             </div>
-
         </div>
-
-        <!-- START JavaScript -->
-        <!-- <script type="text/javascript" src="cordova.js"></script> -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/quo.js"></script>
-        <script type="text/javascript" src="js/snap.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <!-- <script type="text/javascript"> lyra.initialize(); </script> -->
-
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
     </body>
 </html>

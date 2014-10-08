@@ -1,9 +1,9 @@
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/classes.dex : \
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/classes/com/example/lyra/R.class \
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/classes/com/example/lyra/R$attr.class \
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/classes/com/example/lyra/R$drawable.class \
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/classes/com/example/lyra/Lyra.class \
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/classes/com/example/lyra/R$xml.class \
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/classes/com/example/lyra/BuildConfig.class \
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/classes/com/example/lyra/R$string.class \
-/home/wmak/development/Lyra-front/derek-is-an-idiot/Lyra/platforms/android/ant-build/dexedLibs/classes-d1d0897818172e1778e8c461ef991b88.jar \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/classes.dex : \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/classes/com/phonegap/helloworld/R.class \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/classes/com/phonegap/helloworld/R$attr.class \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/classes/com/phonegap/helloworld/R$drawable.class \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/classes/com/phonegap/helloworld/HelloWorld.class \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/classes/com/phonegap/helloworld/R$xml.class \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/classes/com/phonegap/helloworld/BuildConfig.class \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/classes/com/phonegap/helloworld/R$string.class \
+/home/wmak/development/Lyra-front/platforms/android/ant-build/dexedLibs/classes-ee30daedd0a4597b62f0bd98d6ae5434.jar \
