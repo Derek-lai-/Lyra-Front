@@ -45,18 +45,31 @@ public class MainMenuActivity extends Activity {
         photoImage = (ImageView) findViewById(R.id.photo_img);
         photoImage.setImageDrawable(null);
         Button btnCamera = (Button) findViewById(R.id.capture);
+
         btnCamera.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                File file = getOutputPhotoFile();
-                fileUri = Uri.fromFile(getOutputPhotoFile());
-                i.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-                i.putExtra("android.intent.extras.CAMERA_FACING", 1);
-                startActivityForResult(i, CAPTURE_IMAGE_ACTIVITY_REQ);
+                cameraAct();
+            }
+        });
 
+        Button btnSongs = (Button) findViewById(R.id.songs);
+        btnSongs.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainMenuActivity.this, LibraryActivity.class);
+                MainMenuActivity.this.startActivity(i);
             }
         });
     }
+
+    private void cameraAct(){
+        Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        File file = getOutputPhotoFile();
+        fileUri = Uri.fromFile(getOutputPhotoFile());
+        i.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+        i.putExtra("android.intent.extras.CAMERA_FACING", 1);
+        startActivityForResult(i, CAPTURE_IMAGE_ACTIVITY_REQ);
+    }
+
 
     private File getOutputPhotoFile(){
         File directory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), getPackageName());
