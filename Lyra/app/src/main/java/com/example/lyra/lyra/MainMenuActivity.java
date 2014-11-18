@@ -17,6 +17,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +36,13 @@ public class MainMenuActivity extends Activity {
     private static final String TAG = "CallCamera";
     private static final int CAPTURE_IMAGE_ACTIVITY_REQ = 0;
     private WebSocketClient mWebSocketClient;
+    private Button playSong;
+    private Button stopSong;
+    private SeekBar seekBar;
+    private MediaPlayer mediaPlayer;
+    private TextView songName;
+
+    private boolean Complete;
 
     Uri fileUri = null;
     ImageView photoImage = null;
@@ -42,7 +51,22 @@ public class MainMenuActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fullscreen);
+
         photoImage = (ImageView) findViewById(R.id.photo_img);
+        playSong = (Button) findViewById(R.id.btnPlay);
+        stopSong = (Button) findViewById(R.id.btnPause);
+        seekBar = (SeekBar) findViewById(R.id.seekBar);
+        songName = (TextView) findViewById(R.id.songName);
+
+        mediaPlayer = new MediaPlayer();
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                Complete = true;
+            }
+        });
+
         photoImage.setImageDrawable(null);
         Button btnCamera = (Button) findViewById(R.id.capture);
 
@@ -118,6 +142,43 @@ public class MainMenuActivity extends Activity {
             }
         }
     }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        mediaPlayer.stop();
+        Complete = true;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
+        Complete = true;
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mediaPlayer.stop();
+        Complete=true;
+    }
+
 
     private void connectWebSocket() {
         URI uri;
