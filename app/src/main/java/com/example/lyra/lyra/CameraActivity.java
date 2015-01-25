@@ -80,5 +80,4 @@ public class CameraActivity extends Activity{
 
         return mediaFile;
     }
-
 }
