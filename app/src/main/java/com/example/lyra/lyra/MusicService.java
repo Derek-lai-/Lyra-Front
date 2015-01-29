@@ -120,7 +120,6 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
                 .setContentText(songTitle);
         Notification not = builder.build();
         startForeground(NOTIFY_ID, not);
-
     }
 
     //playback methods
